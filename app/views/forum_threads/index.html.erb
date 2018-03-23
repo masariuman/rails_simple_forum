@@ -5,7 +5,7 @@
         <h4><%= as.title.titleize %></h4>
 
         <div class='meta'>
-          <%= as.created_at.strftime("%d %B %Y") %> oleh <%= as.user.name %>
+          <%= I18n.l(as.created_at.to_date) %> oleh <%= as.user.name %>
         </div>
 
         <div class='content'>
