@@ -1,4 +1,4 @@
-class ForumThreadController < ApplicationController
+class ForumThreadsController < ApplicationController
   def index
   end
 end
