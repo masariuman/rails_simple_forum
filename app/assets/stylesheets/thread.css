@@ -9,3 +9,7 @@
 .count {
   float: right;
 }
+
+.thread {
+  margin-bottom: 15px;
+}
