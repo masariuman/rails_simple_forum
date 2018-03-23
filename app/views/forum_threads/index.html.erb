@@ -1,40 +1,23 @@
 <div class='row'>
   <div class='col-md-6 col-md-offset-3'>
-    <div class='thread'>
-      <h4>Judul dari Thread dari forum threads</h4>
+    <% @threads.each do |as| %>
+      <div class='thread'>
+        <h4><%= as.title %></h4>
 
-      <div class='meta'>
-        23 Maret oleh MASARIUMAN
+        <div class='meta'>
+          <%= as.created_at %> oleh <%= as.user.name %>
+        </div>
+
+        <div class='content'>
+          <%= as.content %>
+        </div>
+
+        <div class='count'>
+          <%= as.forum_posts.count %> obrolan
+        </div>
+
+        <div style='clear: both'></div>
       </div>
-
-      <div class='content'>
-        Halo semuanya, ini adalah percobaan dari isi konten dari thread pertama. pada thread pertama ini, hanyalah sebuah percobaan yang dilakukan apakah thread ini berhasil dibuat atau tidak. apabila berhasil, maka ya berhasil. tidak ada yang istimewa dari semua ini.
-      </div>
-
-      <div class='count'>
-        14 obrolan
-      </div>
-
-      <div style='clear: both'></div>
-    </div>
-
-    <div class='thread'>
-      <h4>Judul dari Thread kedua</h4>
-
-      <div class='meta'>
-        23 Maret oleh MASARIUMAN
-      </div>
-
-      <div class='content'>
-        Halo semuanya, ini adalah percobaan dari isi konten dari thread pertama. pada thread pertama ini, hanyalah sebuah percobaan yang dilakukan apakah thread ini berhasil dibuat atau tidak. apabila berhasil, maka ya berhasil. tidak ada yang istimewa dari semua ini.
-      </div>
-
-      <div class='count'>
-        14 obrolan
-      </div>
-
-      <div style='clear: both'></div>
-    </div>
-
+    <% end %>
   </div>
 </div>
