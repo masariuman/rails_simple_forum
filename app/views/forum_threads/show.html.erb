@@ -10,8 +10,19 @@
         <div class='content'>
           <%= @thread.content %>
         </div>
+        <% @thread.forum_post.each do |as| %>
+          
+          <div class='thread'>
+            <div class='meta'>
+              <%= I18n.l(as.created_at.to_date) %> oleh <%= as.user.name %>
+            </div>
 
-        <div style='clear: both'></div>
+            <div class='content'>
+              <%= as.content %>
+            </div>
+           <% end %>
+          </div>
+        <% end %>
       </div>
   </div>
 </div>
