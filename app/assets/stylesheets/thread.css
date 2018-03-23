@@ -8,8 +8,9 @@
 
 .count {
   float: right;
+  margin-bottom: 10px;
 }
 
 .thread {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
