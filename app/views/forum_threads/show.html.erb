@@ -1,14 +1,14 @@
 <div class='row'>
   <div class='col-md-6 col-md-offset-3'>
       <div class='thread'>
-        <h4><%= @thread.as.title.titleize %></h4>
+        <h4><%= @thread.title.titleize %></h4>
 
         <div class='meta'>
-          <%= I18n.l(as.created_at.to_date) %> oleh <%= as.user.name %>
+          <%= I18n.l(@thread.created_at.to_date) %> oleh <%= @thread.user.name %>
         </div>
 
         <div class='content'>
-          <%= as.content %>
+          <%= @thread.content %>
         </div>
 
         <div style='clear: both'></div>
